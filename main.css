@@ -1,0 +1,13 @@
+body {
+    background-color: black;
+}
+
+p, h5 {
+    color: whitesmoke;
+}
+
+.wrapper {
+    border: #808080;
+    border-style:solid;
+    border-width:thick;
+}

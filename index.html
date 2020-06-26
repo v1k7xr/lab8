@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="script.js"></script> 
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-10">
+                   <div id="app">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-secondary" type="button" id="button-getdata" v-on:click="getData">Получить данные</button>
+                        </div>
+                        <input type="text" class="form-control" placeholder="" aria-label="nah" aria-describedby="button-getdata" v-model="inputAddress">
+                      </div>
+                      <div v-for="loc in locations">
+                        <div class="wrapper">
+                            <h5>1) Структурированный адрес -> {{ loc.address }}</h3>
+                            <h5>2) Координаты ->  {{ loc.coordinates }}</h3> 
+                            <h5>3) Ближайшее метро -> {{ loc.nearMetro }}</h3>
+                        </div> 
+                      </div>
+                   </div>
+                      
+                </div>
+                <div class="col-md-1">
+                </div>
+            </div>
+        </div>
+    </body>
+</html> 
